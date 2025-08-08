@@ -1,5 +1,4 @@
-MONGO_URI='mongodb+srv://ravi:db_password@cluster0.8hntp1r.mongodb.net/'
-PORT=3000
+
 const express = require('express');
 const app = express();
 require('dotenv').config();
