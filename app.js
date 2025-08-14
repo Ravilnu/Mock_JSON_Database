@@ -2,7 +2,7 @@
 const express = require('express');
 const app = express();
 require('dotenv').config();
-const mongoose = require('require');
+const mongoose = require('mongoose');
 const PORT = process.env.PORT;
 const uri = process.env.MONGO_URI;
 
@@ -16,4 +16,4 @@ app.listen(PORT, () => {
     console.log(`Connected to port ${PORT}`);
 });
     }
-).catch((err) => { console.log(`Error: ${error}`)});
+).catch((err) => { console.log(`Error: ${err}`)});
