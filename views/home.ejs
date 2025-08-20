@@ -34,7 +34,7 @@
 
             <input type="text" id="new_email"  placeholder="New Email:" />
 
-            <button type="submit">Edit User</button>
+            <button type="submit" onclick="updateUser()">Edit User</button>
 
         </form>
 
@@ -48,12 +48,37 @@
         </form>
 
     </body>
-    <script>
-       function updateUser() {
-        const editUserForm = 
-       }
 
+    <script>
+        function updateUser(){
+
+            //grab the user form
+            const editUserFrom = document.getElementById('editUserForm');
+
+            //grab the id value from the input
+            const id = document.getElementById('edit_id').value;
+
+            //string interpolation to create new URL
+            editUserFrom.action = `/users/` + id + `/update`;
+
+            //submit the form
+            editUserFrom.submit();
+        }
+
+        function deleteUser(){
+
+            //grab the user form
+            const editUserFrom = document.getElementById('deleteUserForm');
+
+            //grab the id value from the input
+            const id = document.getElementById('delete_id').value;
+
+            //string interpolation to create new URL
+            editUserFrom.action = `/users/` + id + `/delete`;
+
+            //submit the form
+            editUserFrom.submit();
+        }
 
     </script>
-
 </html>
